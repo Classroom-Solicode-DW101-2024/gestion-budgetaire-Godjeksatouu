@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #4361ee;   /* Slightly lighter for better contrast */
+    --secondary-color: #3f37c9;
+    --success-color: #4caf50;
+    --danger-color: #f44336;
+    --warning-color: #ff9800;
+    --info-color: #2196f3;
+    --dark-color: #212529;      /* Slightly lighter to improve readability */
+    --light-color: #f8f9fa;
+    --body-bg: #f5f8fa;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    --navbar-bg: #ffffff;      /* Lighten navbar background */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature Icons */
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Avatar */
+.avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+/* Animations */
+.hero {
+    overflow: hidden;
+    background-color: var(--body-bg);
+}
+
+/* Dashboard */
+.icon-bg {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: white;
+}
+
+/* Placeholder Charts */
+.finance-chart-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #4361ee, #3f37c9);
+    opacity: 0.1;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.finance-chart-placeholder::after {
+    content: "Chart would be rendered here";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Expenses Chart Placeholder */
+.expenses-chart-placeholder {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(67, 97, 238, 0.1) 0%, rgba(67, 97, 238, 0.05) 100%);
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expenses-chart-placeholder::after {
+    content: "Pie chart would be rendered here";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Card Hover Effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Controls */
+.form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: border 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(67, 97, 238, 0.25);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* RTL Support */
+[dir="rtl"] .navbar-nav {
+    padding-right: 0;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-2, [dir="rtl"] .me-3, [dir="rtl"] .me-4 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --body-bg: #121212;
+    --dark-color: #e0e0e0;
+    --light-color: #1e1e1e;
+}
+
+.dark-mode .card, .dark-mode .navbar {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0;
+}
+
+.dark-mode .text-muted {
+    color: #adb5bd !important;
+}
+
+/* Animations for AOS */
+[data-aos="custom-fade-up"] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition-property: transform, opacity;
+}
+
+[data-aos="custom-fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
